@@ -3,7 +3,7 @@ using Movie.Persistence.Context;
 
 namespace Movie.Persistence.Repositories
 {
-    public class MovieRepository : GenericRepository<Domain.Entities.Movie>, IMovieRepository
+    public sealed class MovieRepository : GenericRepository<Domain.Entities.Movie>, IMovieRepository
     {
         public MovieRepository(MovieContext context) : base(context)
         {

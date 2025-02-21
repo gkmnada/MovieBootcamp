@@ -4,7 +4,7 @@ using Movie.Persistence.Context;
 
 namespace Movie.Persistence.Repositories
 {
-    public class CastRepository : GenericRepository<Cast>, ICastRepository
+    public sealed class CastRepository : GenericRepository<Cast>, ICastRepository
     {
         public CastRepository(MovieContext context) : base(context)
         {

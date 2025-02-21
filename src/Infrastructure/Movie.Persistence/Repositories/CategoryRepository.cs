@@ -4,7 +4,7 @@ using Movie.Persistence.Context;
 
 namespace Movie.Persistence.Repositories
 {
-    public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
+    public sealed class CategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
         public CategoryRepository(MovieContext context) : base(context)
         {

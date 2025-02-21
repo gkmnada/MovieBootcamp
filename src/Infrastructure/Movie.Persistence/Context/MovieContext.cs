@@ -3,7 +3,7 @@ using Movie.Domain.Entities;
 
 namespace Movie.Persistence.Context
 {
-    public class MovieContext : DbContext
+    public sealed class MovieContext : DbContext
     {
         public MovieContext(DbContextOptions<MovieContext> options) : base(options)
         {

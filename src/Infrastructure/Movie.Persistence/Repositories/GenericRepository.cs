@@ -24,14 +24,14 @@ namespace Movie.Persistence.Repositories
             await Task.CompletedTask;
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int id, CancellationToken cancellationToken)
         {
-            return await _context.FindAsync<T>(id) ?? throw new Exception("Entity not found");
+            return await _context.FindAsync<T>(id, cancellationToken) ?? throw new Exception("Entity not found");
         }
 
-        public async Task<ICollection<T>> ListAsync()
+        public async Task<ICollection<T>> ListAsync(CancellationToken cancellationToken)
         {
-            return await _context.Set<T>().ToListAsync();
+            return await _context.Set<T>().ToListAsync(cancellationToken);
         }
 
         public async Task UpdateAsync(T entity)

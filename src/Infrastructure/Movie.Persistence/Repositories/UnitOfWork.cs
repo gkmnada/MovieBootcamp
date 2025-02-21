@@ -3,7 +3,7 @@ using Movie.Persistence.Context;
 
 namespace Movie.Persistence.Repositories
 {
-    public class UnitOfWork : IUnitOfWork
+    public sealed class UnitOfWork : IUnitOfWork
     {
         private readonly MovieContext _context;
 

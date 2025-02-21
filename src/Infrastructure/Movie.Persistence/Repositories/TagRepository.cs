@@ -4,7 +4,7 @@ using Movie.Persistence.Context;
 
 namespace Movie.Persistence.Repositories
 {
-    public class TagRepository : GenericRepository<Tag>, ITagRepository
+    public sealed class TagRepository : GenericRepository<Tag>, ITagRepository
     {
         public TagRepository(MovieContext context) : base(context)
         {
