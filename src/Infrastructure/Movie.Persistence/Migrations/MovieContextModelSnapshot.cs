@@ -78,6 +78,10 @@ namespace Movie.Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CategoryID"));
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_active");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text")
@@ -112,6 +116,10 @@ namespace Movie.Persistence.Migrations
                         .HasColumnType("text")
                         .HasColumnName("image_url");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_active");
+
                     b.Property<int>("Rating")
                         .HasColumnType("integer")
                         .HasColumnName("rating");
@@ -123,10 +131,6 @@ namespace Movie.Persistence.Migrations
                     b.Property<int>("ReleaseYear")
                         .HasColumnType("integer")
                         .HasColumnName("release_year");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("boolean")
-                        .HasColumnName("status");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -153,6 +157,10 @@ namespace Movie.Persistence.Migrations
                         .HasColumnType("text")
                         .HasColumnName("comment");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_active");
+
                     b.Property<int>("Rating")
                         .HasColumnType("integer")
                         .HasColumnName("rating");
@@ -160,10 +168,6 @@ namespace Movie.Persistence.Migrations
                     b.Property<DateTime>("ReviewDate")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("review_date");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("boolean")
-                        .HasColumnName("status");
 
                     b.HasKey("ReviewID")
                         .HasName("pk_reviews");

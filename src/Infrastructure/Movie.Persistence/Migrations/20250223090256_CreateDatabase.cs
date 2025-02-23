@@ -37,7 +37,8 @@ namespace Movie.Persistence.Migrations
                 {
                     category_id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    name = table.Column<string>(type: "text", nullable: false)
+                    name = table.Column<string>(type: "text", nullable: false),
+                    is_active = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -57,7 +58,7 @@ namespace Movie.Persistence.Migrations
                     duration = table.Column<int>(type: "integer", nullable: false),
                     release_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     release_year = table.Column<int>(type: "integer", nullable: false),
-                    status = table.Column<bool>(type: "boolean", nullable: false)
+                    is_active = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -73,7 +74,7 @@ namespace Movie.Persistence.Migrations
                     comment = table.Column<string>(type: "text", nullable: false),
                     rating = table.Column<int>(type: "integer", nullable: false),
                     review_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    status = table.Column<bool>(type: "boolean", nullable: false)
+                    is_active = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -10,6 +10,6 @@
         public int Duration { get; set; }
         public DateTime ReleaseDate { get; set; }
         public int ReleaseYear { get; set; }
-        public bool Status { get; set; } = true;
+        public bool IsActive { get; set; } = true;
     }
 }

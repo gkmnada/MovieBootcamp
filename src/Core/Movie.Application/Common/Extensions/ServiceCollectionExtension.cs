@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Movie.Application.Features.Cast.Validators;
+using Movie.Application.Features.Category.Validators;
 using System.Reflection;
 
 namespace Movie.Application.Common.Extensions
@@ -16,6 +17,9 @@ namespace Movie.Application.Common.Extensions
 
             services.AddScoped<CreateCastValidator>();
             services.AddScoped<UpdateCastValidator>();
+
+            services.AddScoped<CreateCategoryValidator>();
+            services.AddScoped<UpdateCategoryValidator>();
         }
     }
 }
